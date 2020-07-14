@@ -1,13 +1,91 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #2e8b71;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+}
+.Grid {
+    position: relative;
+    border: 1px solid white;
+}
+.S-Col {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.S-Row {
+    width: 10px;
+    height: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: rgb(255, 255, 255);
+}
+[active="true"] {
+    background-color: red;
+}
+[food="true"] {
+    background-color: blue;
+}
+.LoseBox {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 480px;
+    height: 480px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.LoseBox h1 {
+    color: salmon;
+    font-size: 45px;
+    text-shadow: 1px 1px 0px white, -1px 1px 0px white, 1px -1px 0px white,
+        -1px -1px 0px white;
+}
+.LoseBox button {
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 18px;
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    cursor: pointer;
+    outline: none;
+}
+.Score {
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+    border: 3px solid black;
+}
+.GameControl {
+    position: absolute;
+    top: 0px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 480px;
+}
+.GameControl button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+}
+.GameControl h1 {
+    color: white;
+    text-transform: capitalize;
 }
